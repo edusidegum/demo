@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Hipnoterapia em Novo Hamburgo | Helio Alvim</title>
+    <meta name="description" content="Helio Alvim oferece hipnoterapia em Novo Hamburgo-RS para tratamento de ansiedade, depressão, traumas, fobias e compulsões. Atendimento presencial e online.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hipnoterapia em Novo Hamburgo | Helio Alvim">
+    <meta property="og:description" content="Helio Alvim oferece hipnoterapia em Novo Hamburgo-RS para tratamento de ansiedade, depressão, traumas, fobias e compulsões. Atendimento presencial e online.">
+    <meta property="og:image" content="https://edusidegum.github.io/demo/empresas/helio-alvim/img/hero.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="img/favicon.webp">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ═══════════ RESET & BASE ═══════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #0D0D0D;
+            color: #E0E0E0;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+
+        /* ═══════════ CORES ═══════════ */
+        :root {
+            --verde:       #78BE20;
+            --verde-escuro:#4A7A10;
+            --dourado:     #C9A94E;
+            --dourado-claro:#E8D48B;
+            --preto:       #0D0D0D;
+            --preto-medio: #1A1A1A;
+            --cinza:       #2A2A2A;
+            --cinza-claro: #B0B0B0;
+            --branco:      #F5F5F5;
+        }
+
+        /* ═══════════ HEADER ═══════════ */
+        header {
+            background: var(--preto-medio);
+            border-bottom: 1px solid rgba(120,190,32,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 0;
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--verde), var(--verde-escuro));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+        .logo-text { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--branco); line-height: 1.2; }
+        .logo-text span { display: block; font-size: 0.7rem; font-weight: 400; color: var(--dourado); letter-spacing: 1.5px; text-transform: uppercase; }
+        .header-cta {
+            background: var(--verde);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, transform 0.2s;
+            white-space: nowrap;
+        }
+        .header-cta:hover { background: var(--verde-escuro); transform: translateY(-1px); }
+
+        /* ═══════════ HERO ═══════════ */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.85) 100%);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+        .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(120,190,32,0.08) 0%, transparent 60%);
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .hero-content { max-width: 620px; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(201,169,78,0.15);
+            border: 1px solid rgba(201,169,78,0.35);
+            color: var(--dourado);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            color: var(--branco);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        .hero h1 em {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--verde);
+            display: block;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--cinza-claro);
+            margin-bottom: 28px;
+            max-width: 500px;
+        }
+        .hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+        .btn-primary {
+            background: var(--verde);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary:hover { background: var(--verde-escuro); transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent;
+            color: var(--branco);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 2px solid rgba(255,255,255,0.25);
+            transition: border-color 0.3s, color 0.3s;
+        }
+        .btn-outline:hover { border-color: var(--dourado); color: var(--dourado); }
+
+        /* ═══════════ SEÇÕES ═══════════ */
+        section { padding: 80px 0; }
+        .section-tag {
+            display: inline-block;
+            color: var(--dourado);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.78rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--cinza-claro);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        /* ═══════════ SOBRE ═══════════ */
+        #sobre { background: var(--preto-medio); }
+        .sobre-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .sobre-img {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .sobre-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 2px solid rgba(201,169,78,0.3);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+        .sobre-img img { border-radius: 12px; width: 100%; }
+        .sobre-text p { margin-bottom: 16px; color: var(--cinza-claro); font-size: 1rem; }
+        .sobre-destaque {
+            background: rgba(120,190,32,0.06);
+            border-left: 3px solid var(--verde);
+            padding: 16px 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .sobre-destaque p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--dourado-claro);
+            margin: 0;
+        }
+
+        /* ═══════════ SERVIÇOS ═══════════ */
+        #servicos { background: var(--preto); }
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .servico-card {
+            background: var(--preto-medio);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: border-color 0.3s, transform 0.3s;
+            text-align: center;
+        }
+        .servico-card:hover {
+            border-color: rgba(120,190,32,0.3);
+            transform: translateY(-4px);
+        }
+        .servico-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            background: rgba(120,190,32,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .servico-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 8px;
+        }
+        .servico-card p {
+            font-size: 0.88rem;
+            color: var(--cinza-claro);
+            line-height: 1.5;
+        }
+
+        /* ═══════════ DEPOIMENTOS ═══════════ */
+        #depoimentos { background: var(--preto-medio); }
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .depoimento-card {
+            background: var(--cinza);
+            border-radius: 12px;
+            padding: 28px;
+            position: relative;
+        }
+        .depoimento-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: rgba(120,190,32,0.15);
+            line-height: 1;
+        }
+        .depoimento-card p {
+            font-style: italic;
+            color: var(--cinza-claro);
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .depoimento-card .autor {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dourado);
+            font-size: 0.9rem;
+        }
+
+        /* ═══════════ FAQ ═══════════ */
+        #faq { background: var(--preto); }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--preto-medio);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--branco);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 20px 24px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-question .arrow {
+            font-size: 1.2rem;
+            color: var(--verde);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .faq-item.open .faq-question .arrow { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+            padding: 0 24px 20px;
+        }
+        .faq-answer p { color: var(--cinza-claro); font-size: 0.95rem; }
+
+        /* ═══════════ CTA FINAL ═══════════ */
+        #cta {
+            background: linear-gradient(135deg, rgba(120,190,32,0.08) 0%, rgba(201,169,78,0.05) 100%);
+            text-align: center;
+            padding: 80px 0;
+        }
+        #cta .section-title { margin-bottom: 10px; }
+        #cta .section-subtitle { margin: 0 auto 30px; }
+        .cta-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .cta-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--cinza-claro);
+            font-size: 0.95rem;
+        }
+        .cta-info-item .icon { color: var(--verde); font-size: 1.2rem; }
+
+        /* ═══════════ WHATSAPP FLOAT ═══════════ */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 90px;
+            right: 24px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1.8rem;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(37,211,102,0.55);
+        }
+
+        /* ═══════════ FOOTER ═══════════ */
+        footer {
+            background: var(--preto-medio);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 30px 0;
+            text-align: center;
+        }
+        footer .container { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+        footer .footer-brand { font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--branco); font-size: 1rem; }
+        footer .footer-brand span { color: var(--verde); }
+        footer .footer-info { font-size: 0.82rem; color: var(--cinza-claro); }
+
+        /* ═══════════ RESPONSIVO ═══════════ */
+        @media (max-width: 768px) {
+            .sobre-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hero { min-height: 70vh; text-align: center; }
+            .hero-content { max-width: 100%; }
+            .hero p { max-width: 100%; }
+            .hero-buttons { justify-content: center; }
+            .depoimentos-grid { grid-template-columns: 1fr; }
+            section { padding: 50px 0; }
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "O que é hipnoterapia e como funciona?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A hipnoterapia é uma técnica terapêutica que utiliza o estado de hipnose — um estado natural de foco e relaxamento profundo — para acessar o subconsciente e promover mudanças positivas. Diferente do que muitos imaginam, você permanece consciente e no controle durante toda a sessão. O hipnoterapeuta atua como um guia, ajudando você a ressignificar traumas, superar medos e reprogramar padrões limitantes de forma segura e eficaz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quais problemas a hipnoterapia pode tratar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A hipnoterapia é eficaz no tratamento de uma ampla gama de questões emocionais e comportamentais, incluindo ansiedade, depressão, traumas, fobias, compulsões, dependências químicas, síndrome do pânico, estresse pós-traumático, insônia, baixa autoestima e dificuldades de relacionamento. Também auxilia em processos de autoconhecimento, regressão e desenvolvimento pessoal."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como agendar uma consulta com Helio Alvim?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O agendamento é simples: entre em contato pelo WhatsApp (51) 99993-5438 ou pelo Instagram @helio_alvim_filho. As consultas podem ser presenciais em Novo Hamburgo-RS ou online, para todo o Brasil. A primeira sessão inclui uma avaliação inicial para entender suas necessidades e definir o melhor plano terapêutico."
+                }
+            }
+        ],
+        "sameAs": [
+            "https://www.instagram.com/helio_alvim_filho"
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ═══════════ HEADER ═══════════ -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                <div class="logo-text">
+                    Helio Alvim
+                    <span>Hipnoterapeuta</span>
+                </div>
+            </div>
+            <a href="https://wa.me/5551999935438?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20hipnoterapia." class="header-cta" target="_blank" rel="noopener">
+                💬 Agendar Consulta
+            </a>
+        </div>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero">
+        <div class="hero-bg"><img src="img/hero.webp" alt="Helio Alvim - Hipnoterapeuta em ambiente acolhedor de consultório"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Café &amp; Reflexão</span>
+                <h1>Paz não é ausência de problemas, <em>é presença de propósito.</em></h1>
+                <p>Transforme sua vida através da hipnoterapia. Atendimento presencial em Novo Hamburgo-RS e online para todo o Brasil.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5551999935438?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20hipnoterapia." class="btn-primary" target="_blank" rel="noopener">
+                        💬 Agendar no WhatsApp
+                    </a>
+                    <a href="#servicos" class="btn-outline">Conheça os Tratamentos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SOBRE ═══════════ -->
+    <section id="sobre">
+        <div class="container">
+            <div class="sobre-grid">
+                <div class="sobre-img">
+                    <img src="img/foto1.webp" alt="Helio Alvim Hipnoterapeuta - Consultório em Novo Hamburgo" loading="lazy">
+                </div>
+                <div class="sobre-text">
+                    <span class="section-tag">Quem Sou</span>
+                    <h2 class="section-title">Helio Alvim — Hipnoterapeuta</h2>
+                    <p>
+                        Com anos de experiência em hipnoterapia clínica, dedico meu trabalho a ajudar pessoas a superarem
+                        bloqueios emocionais, traumas e padrões limitantes. Minha abordagem combina técnicas modernas de hipnose
+                        com um olhar humano e acolhedor, respeitando o tempo e a história de cada pessoa.
+                    </p>
+                    <p>
+                        Atendo presencialmente em <strong>Novo Hamburgo - RS</strong> e também online, para que você possa
+                        iniciar sua jornada de transformação de onde estiver, com total segurança e conforto.
+                    </p>
+                    <div class="sobre-destaque">
+                        <p>"Paz não é ausência de problemas, é presença de propósito."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ SERVIÇOS ═══════════ -->
+    <section id="servicos">
+        <div class="container">
+            <span class="section-tag">Áreas de Atuação</span>
+            <h2 class="section-title">Como a Hipnoterapia Pode Ajudar Você</h2>
+            <p class="section-subtitle">A hipnose clínica é uma ferramenta poderosa e segura para tratar uma ampla variedade de questões emocionais e comportamentais.</p>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">🎯</div>
+                    <h3>Traumas</h3>
+                    <p>Ressignifique experiências passadas e liberte-se da carga emocional que impede seu crescimento.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">⏳</div>
+                    <h3>Regressão</h3>
+                    <p>Acesse memórias profundas para compreender e curar a origem de padrões repetitivos.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">😰</div>
+                    <h3>Ansiedade</h3>
+                    <p>Reduza os sintomas de ansiedade e recupere a tranquilidade para viver o presente com plenitude.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🌧️</div>
+                    <h3>Depressão</h3>
+                    <p>Resgate sua motivação e alegria de viver através da reprogramação de crenças limitantes.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🕷️</div>
+                    <h3>Fobias</h3>
+                    <p>Supere medos irracionais de forma rápida e duradoura com técnicas específicas de hipnose.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🔄</div>
+                    <h3>Compulsões</h3>
+                    <p>Liberte-se de comportamentos compulsivos e retome o controle sobre suas escolhas.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">🚫</div>
+                    <h3>Dependências Químicas</h3>
+                    <p>Fortalecimento da vontade e ressignificação dos gatilhos emocionais para uma vida livre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ DEPOIMENTOS ═══════════ -->
+    <section id="depoimentos">
+        <div class="container">
+            <span class="section-tag">Depoimentos</span>
+            <h2 class="section-title">O Que Dizem Quem Já Passou Pelo Processo</h2>
+            <p class="section-subtitle">Histórias reais de transformação e superação através da hipnoterapia.</p>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <p>Depois de anos lutando contra a ansiedade, as sessões com o Helio me trouxeram uma paz que eu não sentia há muito tempo. Hoje consigo enfrentar situações que antes me paralisavam.</p>
+                    <span class="autor">— M. Cristina, 42 anos</span>
+                </div>
+                <div class="depoimento-card">
+                    <p>Eu tinha pavor de dirigir após um acidente. Em poucas sessões de hipnoterapia, consegui superar o trauma e voltei a pegar o volante com confiança. Sou muito grato!</p>
+                    <span class="autor">— R. Oliveira, 35 anos</span>
+                </div>
+                <div class="depoimento-card">
+                    <p>A regressão me ajudou a entender padrões que se repetiam na minha vida e que eu não conseguia explicar. Foi uma experiência profunda e transformadora.</p>
+                    <span class="autor">— A. Ferreira, 29 anos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FAQ ═══════════ -->
+    <section id="faq">
+        <div class="container">
+            <span class="section-tag">Dúvidas Frequentes</span>
+            <h2 class="section-title">Perguntas Que Recebo com Frequência</h2>
+            <p class="section-subtitle">Esclareça suas dúvidas sobre como funciona a hipnoterapia e o processo terapêutico.</p>
+            <div class="faq-list">
+                <div class="faq-item open">
+                    <button class="faq-question" aria-expanded="true">
+                        O que é hipnoterapia e como funciona?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A hipnoterapia é uma técnica terapêutica que utiliza o estado de hipnose — um estado natural de foco e relaxamento profundo — para acessar o subconsciente e promover mudanças positivas. Diferente do que muitos imaginam, você permanece consciente e no controle durante toda a sessão. O hipnoterapeuta atua como um guia, ajudando você a ressignificar traumas, superar medos e reprogramar padrões limitantes de forma segura e eficaz.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Quais problemas a hipnoterapia pode tratar?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>A hipnoterapia é eficaz no tratamento de uma ampla gama de questões emocionais e comportamentais, incluindo ansiedade, depressão, traumas, fobias, compulsões, dependências químicas, síndrome do pânico, estresse pós-traumático, insônia, baixa autoestima e dificuldades de relacionamento. Também auxilia em processos de autoconhecimento, regressão e desenvolvimento pessoal.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Como agendar uma consulta com Helio Alvim?
+                        <span class="arrow">▾</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O agendamento é simples: entre em contato pelo WhatsApp (51) 99993-5438 ou pelo Instagram @helio_alvim_filho. As consultas podem ser presenciais em Novo Hamburgo-RS ou online, para todo o Brasil. A primeira sessão inclui uma avaliação inicial para entender suas necessidades e definir o melhor plano terapêutico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ CTA FINAL ═══════════ -->
+    <section id="cta">
+        <div class="container">
+            <span class="section-tag">Pronto Para Começar?</span>
+            <h2 class="section-title">Dê o Primeiro Passo Para Sua Transformação</h2>
+            <p class="section-subtitle">Agende sua consulta agora mesmo. Atendimento presencial em Novo Hamburgo-RS e online para todo o Brasil.</p>
+            <div class="cta-info">
+                <div class="cta-info-item">
+                    <span class="icon">📱</span> (51) 99993-5438
+                </div>
+                <div class="cta-info-item">
+                    <span class="icon">📷</span> @helio_alvim_filho
+                </div>
+                <div class="cta-info-item">
+                    <span class="icon">📍</span> Novo Hamburgo - RS
+                </div>
+            </div>
+            <a href="https://wa.me/5551999935438?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20hipnoterapia." class="btn-primary" target="_blank" rel="noopener">
+                💬 Quero Agendar Minha Consulta
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════ WHATSAPP FLOAT ═══════════ -->
+    <a href="https://wa.me/5551999935438?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20hipnoterapia." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp" title="Agende sua consulta">
+        💬
+    </a>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">Helio Alvim <span>•</span> Hipnoterapeuta</div>
+            <div class="footer-info">
+                📍 Novo Hamburgo - RS &nbsp;|&nbsp; 📱 (51) 99993-5438 &nbsp;|&nbsp; 📷 @helio_alvim_filho
+            </div>
+            <div class="footer-info">Atendimento presencial e online • CRP ativo</div>
+        </div>
+    </footer>
+
+    <!-- ═══════════ SCRIPT DE INJEÇÃO (bloco-incluir.js) ═══════════ -->
+    <script src="https://edusidegum.github.io/menu/scripts/bloco-incluir.js" defer></script>
+
+    <!-- ═══════════ FAQ ACCORDION ═══════════ -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isOpen = item.classList.contains('open');
+                // Fecha todos
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                btn.setAttribute('aria-expanded', 'false');
+                // Abre o clicado se não estava aberto
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
