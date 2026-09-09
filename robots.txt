@@ -1,0 +1,101 @@
+# ============================================================
+# robots.txt — demo (edusidegum.github.io/demo)
+# ============================================================
+# Política de rastreamento:
+#   - BLOQUEIA a página principal e arquivos na raiz de /demo/
+#   - PERMITE todos os subdiretórios e seus arquivos internos
+#   - BLOQUEIA crawlers de treinamento de IA
+#
+# Estrutura por agente: cada bloco pode ser ajustado
+# individualmente conforme necessidade futura.
+# ============================================================
+
+
+# ──────────────────────────────────────────────
+# 🤖 Crawlers de Treinamento de IA — BLOQUEADOS
+# ──────────────────────────────────────────────
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: peer39_crawler
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+
+# ──────────────────────────────────────────────
+# 🔍 Googlebot — Indexação seletiva
+# ──────────────────────────────────────────────
+
+User-agent: Googlebot
+Disallow: /demo/index.html
+Disallow: /demo/README.md
+Disallow: /demo/robots.txt
+Allow: /demo/*/
+
+
+# ──────────────────────────────────────────────
+# 🔍 Bingbot — Indexação seletiva
+# ──────────────────────────────────────────────
+
+User-agent: Bingbot
+Disallow: /demo/index.html
+Disallow: /demo/README.md
+Disallow: /demo/robots.txt
+Allow: /demo/*/
+
+
+# ──────────────────────────────────────────────
+# 🔍 Demais crawlers de busca (Yandex, DuckDuckGo, etc.)
+# ──────────────────────────────────────────────
+
+User-agent: *
+Disallow: /demo/index.html
+Disallow: /demo/README.md
+Disallow: /demo/robots.txt
+Allow: /demo/*/
+
+
+# Sitemap (se houver)
+# Sitemap: https://edusidegum.github.io/demo/sitemap.xml
