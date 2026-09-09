@@ -48,7 +48,7 @@ demo/
 
 | Projeto | URL | Status |
 |---------|-----|--------|
-| **Hélio Alvim Filho** | [`/helio_alvim_filho`](https://edusidegum.github.io/demo/helio_alvim_filho/) | ✅ Online |
+| **A ** | [`/helio_alvim_filho`](https://edusidegum.github.io/ | ✅ Online |
 | *(seu próximo cliente)* | — | 🔜 Em breve |
 
 ---
