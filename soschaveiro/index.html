@@ -58,167 +58,168 @@
     <link rel="preload" as="image" href="img/chaveiro1.png" fetchpriority="high">
 
     <!-- JSON-LD: @graph com mainEntity + GEO + sameAs + FAQPage -->
-    <script type="application/ld+json">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Locksmith",
+      "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio",
+      "name": "Chaveiro Em Dois Irmãos",
+      "description": "Chaveiro 24 horas em Dois Irmãos e região. Chaves codificadas, conserto de chaves, troca de carcaça, abertura de portas e chaves presenciais para diversas marcas e modelos de veículos.",
+      "url": "https://edusidegum.github.io/demo/soschaveiro/",
+      "image": "https://edusidegum.github.io/demo/soschaveiro/img/chaveiro1.png",
+      "logo": "https://edusidegum.github.io/demo/soschaveiro/img/chaveiro1.png",
+      "telephone": "+5551998480155",
+      "email": "SEU_EMAIL_REAL@EXEMPLO.COM",
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "A combinar no atendimento",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Irineu Becker, 265 - sala 6",
+        "addressLocality": "Dois Irmãos",
+        "addressRegion": "RS",
+        "postalCode": "93950-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5841,
+        "longitude": -51.0903
+      },
+      "openingHoursSpecification": [
         {
-          "@type": "Locksmith",
-          "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio",
-          "name": "Chaveiro Em Dois Irmãos",
-          "description": "Chaveiro 24 horas em Rio do Sul e região. Chaves codificadas, conserto de chaves, troca de carcaça, abertura de portas e chaves presenciais para diversas marcas e modelos.",
-          "url": "https://edusidegum.github.io/demo/soschaveiro/",
-          "image": "https://edusidegum.github.io/demo/soschaveiro/img/chaveiro1.png",
-          "logo": "https://edusidegum.github.io/demo/soschaveiro/img/chaveiro1.png",
-          "telephone": "+55 51 998480155",
-         
-          "priceRange": "$$",
-          "currenciesAccepted": "BRL",
-          "paymentAccepted": "A combinar no atendimento",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Dois Irmãos",
-            "addressRegion": "RS",
-            "addressCountry": "BR"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": -29.5841,
-            "longitude": -451.0903
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-              "opens": "07:00:00",
-              "closes": "21:59:59"
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00:00",
+          "closes": "23:59:59"
+        }
+      ],
+      "areaServed": {
+        "@type": "City",
+        "name": "Dois Irmãos e região"
+      },
+      "sameAs": [
+        "https://www.instagram.com/chaveiroemdois/",
+        "https://wa.me/5551998480155"
+      ],
+      "founder": {
+        "@type": "Person",
+        "@id": "https://edusidegum.github.io/demo/soschaveiro/#autor",
+        "name": "Eduardo Sidegum",
+        "url": "https://edusidegum.github.io/edusidegum/"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Chaveiro",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chaves codificadas",
+              "description": "Cópia e programação de chaves codificadas para diversas marcas e modelos de veículos."
             }
-          ],
-          "areaServed": {
-            "@type": "City",
-            "name": "Dois Irmãos, Ivoti, Morro Reuter, Santa Maria do Herval e região"
           },
-          "sameAs": [
-            "https://www.instagram.com/chaveiroemdois/"
-          ],
-          "founder": {
-            "@type": "Person",
-            "@id": "https://edusidegum.github.io/demo/soschaveiro/#autor",
-            "name": "Eduardo Sidegum",
-            "url": "https://edusidegum.github.io/edusidegum/"
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Conserto de chaves",
+              "description": "Reparo de chaves danificadas ou desgastadas pelo uso."
+            }
           },
-          "knowsAbout": ["chaveiro", "chaves codificadas", "fechaduras", "abertura de portas"],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Serviços de Chaveiro",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Chaves codificadas",
-                  "description": "Cópia e programação de chaves codificadas para diversas marcas e modelos de veículos."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Conserto de chaves",
-                  "description": "Reparo de chaves danificadas ou desgastadas."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Troca de carcaça",
-                  "description": "Substituição de carcaça de chaves e controles."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Abertura de portas",
-                  "description": "Abertura de portas residenciais, comerciais e automotivas."
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Atendimento 24 horas",
-                  "description": "Atendimento emergencial de chaveiro a qualquer hora."
-                }
-              }
-            ]
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Troca de carcaça",
+              "description": "Substituição de carcaça de chaves e controles, preservando o funcionamento."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Abertura de portas",
+              "description": "Abertura de portas residenciais, comerciais e automotivas sem danos."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Atendimento 24 horas",
+              "description": "Atendimento emergencial de chaveiro a qualquer hora em Dois Irmãos e região."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://edusidegum.github.io/demo/soschaveiro/#webpage",
+      "url": "https://edusidegum.github.io/demo/soschaveiro/",
+      "name": "Chaveiro Em Dois Irmãos | Chaveiro 24h em Dois Irmãos — Chaves Codificadas",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio" },
+      "mainEntity": { "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://edusidegum.github.io/demo/soschaveiro/#autor",
+      "name": "Eduardo Sidegum",
+      "jobTitle": "Bacharel em Sistemas de Informação",
+      "description": "Arquiteto de sistemas web e engenheiro sênior front-end.",
+      "url": "https://edusidegum.github.io/edusidegum/",
+      "worksOn": {
+        "@type": "LocalBusiness",
+        "name": "Chaveiro Em Dois Irmãos",
+        "url": "https://edusidegum.github.io/demo/soschaveiro/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://edusidegum.github.io/demo/soschaveiro/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O Chaveiro Em Dois Irmãos atende 24 horas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. O atendimento é 24 horas, incluindo emergências de abertura de portas e chaves codificadas em Dois Irmãos e região."
           }
         },
         {
-          "@type": "WebPage",
-          "@id": "https://edusidegum.github.io/demo/soschaveiro/#webpage",
-          "url": "https://edusidegum.github.io/demo/soschaveiro/",
-          "name": "Chaveiro Em Dois Irmãos | Chaveiro 24h em Rio do Sul",
-          "inLanguage": "pt-BR",
-          "isPartOf": { "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio" },
-          "mainEntity": { "@id": "https://edusidegum.github.io/demo/soschaveiro/#negocio" }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://edusidegum.github.io/demo/soschaveiro/#autor",
-          "name": "Eduardo Sidegum",
-          "jobTitle": "Bacharel em Sistemas de Informação",
-          "description": "Arquiteto de sistemas web e engenheiro sênior front-end.",
-          "url": "https://edusidegum.github.io/edusidegum/",
-          "worksOn": {
-            "@type": "LocalBusiness",
-            "name": "Chaveiro Em Dois Irmãos",
-            "url": "https://edusidegum.github.io/demo/soschaveiro/"
+          "@type": "Question",
+          "name": "Vocês fazem cópia de chave codificada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Trabalhamos com chaves codificadas e chaves presenciais para diversas marcas e modelos de veículos."
           }
         },
         {
-          "@type": "FAQPage",
-          "@id": "https://edusidegum.github.io/demo/soschaveiro/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "O Chaveiro Em Dois Irmãos atende 24 horas?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sim. O atendimento é 24 horas, incluindo emergências de abertura de portas e chaves codificadas em Rio do Sul e região."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Vocês fazem cópia de chave codificada?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sim. Trabalhamos com chaves codificadas e chaves presenciais para diversas marcas e modelos de veículos."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Qual a área de atendimento?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Atendemos Rio do Sul e região, com serviço à domicílio."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Como solicito o serviço?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "É só chamar pelo WhatsApp ou pelo Instagram @chaveiroemdois e informar o serviço e o endereço."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Qual a área de atendimento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atendemos Dois Irmãos e região, com serviço à domicílio e emergências 24 horas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como solicito o serviço?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É só chamar pelo WhatsApp (51) 99848-0155 ou pelo Instagram @chaveiroemdois e informar o serviço e o endereço."
+          }
         }
       ]
     }
-    </script>
-
+  ]
+}
+</script>
     <style>
         /* ===== CSS Reset forte (consistência de tema) ===== */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
