@@ -10,6 +10,9 @@
 # individualmente conforme necessidade futura.
 # ============================================================
 
+# Bloqueio geral de indexação e rastreamento
+User-agent: *
+Disallow: /demo/all
 
 # ──────────────────────────────────────────────
 # 🤖 Crawlers de Treinamento de IA — BLOQUEADOS
