@@ -84,9 +84,48 @@ Isso garante que a página "Em construção" não apareça em resultados de busc
 
 ---
 
-## 🛡️ Licença
+## Licença e direitos de uso
 
-Projetos individuais pertencem aos seus respectivos clientes. Este repositório é privado para fins de demonstração.
+Este repositório é público para fins de demonstração, avaliação técnica
+e apresentação comercial. A publicação no GitHub não significa que os
+arquivos estejam liberados para cópia, modificação, redistribuição,
+revenda ou uso comercial.
+
+Os modelos, componentes, scripts, estruturas, padrões de SEO técnico,
+metodologias e artefatos comuns são de titularidade de:
+
+**<e/> e-Sid Solutions**
+
+Salvo disposição contratual expressa, todos os direitos estão reservados.
+
+A contratação de uma página ou demonstração específica não implica
+automaticamente a transferência da propriedade intelectual do código-base,
+dos componentes reutilizáveis, dos scripts comuns, dos modelos, da
+metodologia ou da estrutura técnica.
+
+Os direitos relativos a textos, logotipos, fotografias, marcas, imagens,
+dados empresariais, códigos de terceiros e demais materiais fornecidos
+pelo cliente permanecem sujeitos às respectivas titularidades e
+autorizações.
+
+A licença concedida ao cliente deverá ser definida na proposta comercial
+ou em contrato próprio, especificando, quando aplicável:
+
+- quais arquivos serão entregues;
+- se haverá licença de uso ou cessão de direitos;
+- se a autorização será exclusiva ou não exclusiva;
+- prazo e território de utilização;
+- autorização para edição e manutenção;
+- possibilidade de hospedagem em outro domínio;
+- tratamento dos componentes comuns;
+- responsabilidade por textos, imagens, marcas e dados fornecidos;
+- condições para encerramento ou alteração do serviço.
+
+Consulte o arquivo [TERMOS-DE-USO.md](TERMOS-DE-USO.md) para as condições
+gerais de demonstração e utilização deste repositório.
+
+Este documento não substitui contrato, proposta comercial ou instrumento
+jurídico específico firmado com o cliente.
 
 ---
 
