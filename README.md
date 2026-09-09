@@ -33,7 +33,7 @@ demo/
 ├── robots.txt              ← Política de rastreamento
 ├── README.md               ← Este arquivo
 │
-├── helio_alvim_filho/      ← Projeto exemplo
+├── /A      ← Projeto exemplo
 │   ├── index.html
 │   ├── assets/
 │   └── ...
@@ -48,7 +48,7 @@ demo/
 
 | Projeto | URL | Status |
 |---------|-----|--------|
-| **A ** | [`/helio_alvim_filho`](https://edusidegum.github.io/ | ✅ Online |
+| **A ** | [`/A`](https://edusidegum.github.io/ | ✅ Online |
 | *(seu próximo cliente)* | — | 🔜 Em breve |
 
 ---
