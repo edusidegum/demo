@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cachacaria Wille — Alambique Premium | Poco das Antas · RS</title>
+  <meta name="description" content="Cachacaria Wille em Poco das Antas. Alambique premium com tradicao e qualidade. Em breve, novo portal completo.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://edusidegum.github.io/demo/wille/wille.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edusidegum.github.io/demo/wille/wille.html">
+  <meta property="og:title" content="Cachacaria Wille — Alambique Premium">
+  <meta property="og:description" content="Tradicao e excelencia em cachaca artesanal. Conheca nossa historia.">
+  <meta property="og:image" content="https://edusidegum.github.io/demo/wille/img/Wille_capa.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cachacaria Wille — Alambique Premium">
+  <meta name="twitter:image" content="https://edusidegum.github.io/demo/wille/img/Wille_capa.png">
+
+  <link rel="preload" as="video" href="img/wille.mp4">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://edusidegum.github.io/demo/wille/#business",
+        "name": "Cachacaria Wille",
+        "url": "https://edusidegum.github.io/demo/wille/wille.html",
+        "founder": {
+          "@type": "Person",
+          "@id": "https://edusidegum.github.io/edusidegum/#person",
+          "name": "Edu Sidegum"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "Cachaca Artesanal Wille",
+        "brand": { "@type": "Brand", "name": "Wille" },
+        "description": "Cachaca premium produzida em Poco das Antas, RS.",
+        "manufacturer": { "@id": "https://edusidegum.github.io/demo/wille/#business" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://edusidegum.github.io/demo/wille/index.html#webpage",
+        "url": "https://edusidegum.github.io/demo/wille/index.html",
+        "name": "Cachacaria Wille — Em Obras",
+        "isPartOf": { "@id": "https://edusidegum.github.io/demo/wille/#business" },
+        "inLanguage": "pt-BR"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --gold: #c9a050;
+      --gold-light: #e0c878;
+      --copper: #b87333;
+      --dark: #0d0d0d;
+      --dark-warm: #1a0f0a;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Georgia', serif;
+      color: #ffffff;
+      overflow: hidden;
+      position: relative;
+      background: var(--dark);
+    }
+
+    #bgVideo {
+      position: fixed;
+      top: 50%; left: 50%;
+      min-width: 100%; min-height: 100%;
+      width: auto; height: auto;
+      z-index: -2;
+      transform: translateX(-50%) translateY(-50%);
+      filter: brightness(0.4);
+      object-fit: cover;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle, transparent 20%, var(--dark) 100%);
+      z-index: -1;
+    }
+
+    .parallax-layer {
+      position: absolute;
+      top: -10%; left: 0; width: 100%; height: 120%;
+      background-image: radial-gradient(circle, var(--gold) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.15;
+      z-index: -1;
+      animation: floatParticles 30s linear infinite;
+    }
+
+    @keyframes floatParticles {
+      from { transform: translateY(0); }
+      to { transform: translateY(-5%); }
+    }
+
+    .container {
+      max-width: 560px;
+      width: 90%;
+      padding: 3.5rem 2rem;
+      background: var(--glass);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    p { font-size: 1.1rem; color: #d1c4b2; margin-bottom: 2rem; line-height: 1.6; }
+
+    .timer-box { margin-bottom: 2.5rem; font-size: 0.9rem; color: var(--gold-light); }
+    #timer { font-weight: bold; font-size: 1.2rem; }
+
+    .btn {
+      display: block;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--copper) 100%);
+      color: var(--dark);
+    }
+
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(201, 160, 80, 0.3); }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+
+    .credito {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      opacity: 0.5;
+    }
+
+    .credito a { color: inherit; text-decoration: underline; }
+
+    :focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bgVideo" poster="img/Wille_capa.png">
+    <source src="img/wille.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+  <div class="parallax-layer"></div>
+
+  <main class="container">
+    <h1>Cachacaria Wille</h1>
+    <p>Em breve nosso novo site. Enquanto isso, conheca nossos produtos e nossa historia.</p>
+
+    <div class="timer-box">
+      Redirecionando em <span id="timer">10</span> segundos
+    </div>
+
+    <a href="wille.html" class="btn btn-gold">Conheca a Cachacaria Wille</a>
+    <a href="https://wa.me/5551992931816" class="btn btn-whatsapp" target="_blank">WhatsApp Direto</a>
+
+    <p class="credito">
+      Projeto digital por <a href="https://edusidegum.github.io/edusidegum/" rel="author">Edu Sidegum</a>
+    </p>
+  </main>
+
+  <script>
+    (function() {
+      var count = 10;
+      var timerDisplay = document.getElementById('timer');
+      if (!timerDisplay) return;
+
+      var countdown = setInterval(function() {
+        count--;
+        timerDisplay.textContent = count;
+        if (count <= 0) {
+          clearInterval(countdown);
+          window.location.href = "wille.html";
+        }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>

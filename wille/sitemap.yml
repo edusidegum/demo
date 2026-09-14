@@ -1,0 +1,25 @@
+# wille/.github/workflows/sitemap.yml
+name: Gerar Sitemap Wille
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.html'
+  workflow_dispatch:
+
+jobs:
+  sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://edusidegum.github.io/demo/wille/
+          include-pdf: false
+          include-html: true
+      - run: |
+          git config user.name "Sitemap Bot"
+          git config user.email "actions@wille.com"
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "🤖 sitemap: atualização automática"
+          git push

@@ -1,0 +1,12 @@
+# N'ativa Academia
+> Pequeno negócio em Dois Irmãos/RS. Serviços de Musculação, Natação e Hidroginástica.
+## Páginas
+- Principal: https://edusidegum.github.io/demo/nativaacademiadi/nativa.html
+- Privacidade: https://edusidegum.github.io/demo/nativaacademiadi/privacidade.html
+- Completo: https://edusidegum.github.io/demo/nativaacademiadi/llms-full.txt (opcional)
+## Contato
+- Instagram: https://www.instagram.com/nativaacademiadi/
+- WhatsApp: https://wa.me/555198987808
+- Responsável: Eduardo Sidegum
+## Informações
+- Fundação: 2003 | Cidade: Dois Irmãos, RS | Atendimento: Seg–Sex 06:00–22:00, Sáb 07:00–18:00

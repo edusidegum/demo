@@ -1,0 +1,526 @@
+/* ============================================
+   Marcia Ludwig Interiores — styles.css
+   Paleta terrosa, elegante e acolhedora
+   ============================================ */
+
+/* ---------- 1. RESET / GLOBAL ---------- */
+:root {
+  --bg: #fffaf6;
+  --bg-alt: #f5ece3;
+  --surface: #ffffff;
+  --primary: #b98b6a;
+  --primary-dark: #8f6a4f;
+  --text: #2b2420;
+  --text-muted: #6b5d52;
+  --border: #e6d9c9;
+  --shadow: 0 4px 20px rgba(143, 106, 79, 0.1);
+  --radius: 14px;
+  --radius-lg: 20px;
+  --max-width: 1120px;
+  --whatsapp: #25d366;
+  --font: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---------- 2. UTILITIES ---------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--primary);
+  color: #ffffff;
+  padding: 10px 16px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 36px;
+  max-width: 60ch;
+}
+
+/* ---------- 3. BUTTONS ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+  background: #1da851;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+}
+
+/* ---------- 4. HEADER ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 250, 246, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.site-nav a {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: var(--primary-dark);
+}
+
+.nav-wa {
+  color: var(--whatsapp) !important;
+  font-weight: 700;
+}
+
+.nav-wa:hover {
+  color: #1da851 !important;
+}
+
+/* ---------- 5. HERO ---------- */
+.hero {
+  padding: 60px 0 80px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+}
+
+.hero .subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  max-width: 52ch;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- 6. VALORES ---------- */
+.valores {
+  padding: 70px 0;
+  background: var(--bg-alt);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.valor-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.valor-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--primary-dark);
+}
+
+.valor-card p {
+  color: var(--text-muted);
+  font-size: 0.96rem;
+}
+
+/* ---------- 7. INSTAGRAM FEATURE ---------- */
+.ig-section {
+  padding: 70px 0;
+}
+
+.ig-feature {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.ig-img-wrap {
+  display: block;
+  overflow: hidden;
+}
+
+.ig-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.ig-img-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.ig-text {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.ig-text .ig-meta {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.ig-text h3 {
+  font-size: 1.4rem;
+}
+
+.ig-text .ig-excerpt {
+  color: var(--text-muted);
+}
+
+/* ---------- 8. PORTFOLIO ---------- */
+.portfolio {
+  padding: 70px 0;
+  background: var(--bg-alt);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 18px;
+}
+
+.project-body h3 {
+  font-size: 1.15rem;
+  margin-bottom: 4px;
+}
+
+/* ---------- 9. CONTATO ---------- */
+.contact {
+  padding: 70px 0;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border-radius: var(--radius-lg);
+  padding: 60px 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact-box h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 14px;
+}
+
+.contact-box p {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  opacity: 0.9;
+}
+
+/* ---------- 10. FOOTER ---------- */
+.site-footer {
+  background: var(--text);
+  color: #dcdcdc;
+  padding: 40px 0;
+}
+
+.footer-info {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--primary);
+  margin: 0 12px;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #9a9a9a;
+}
+
+/* ---------- 11. FLOATING WHATSAPP ---------- */
+.wa-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+  transition: transform 0.2s ease;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+/* ---------- 12. RESPONSIVO ---------- */
+@media (max-width: 860px) {
+  .hero-grid,
+  .ig-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valores-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 40px 0 60px;
+  }
+
+  .site-nav ul {
+    gap: 14px;
+  }
+
+  .site-nav a {
+    font-size: 0.85rem;
+  }
+
+  .contact-box {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .valores,
+  .ig-section,
+  .portfolio {
+    padding: 50px 0;
+  }
+}
+/* Inserir logo abaixo da regra .portfolio-grid existente */
+.portfolio-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Inserir dentro do bloco @media (max-width: 860px) existente */
+@media (max-width: 860px) {
+  .portfolio-grid.four {
+    grid-template-columns: 1fr;
+  }
+}

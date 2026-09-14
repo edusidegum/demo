@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- ═══════════ HEAD PADRÃO — NATIVA ACADEMIA ═══════════ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO On-Page -->
+<title>N'ativa Academia — Musculação, Natação e Hidroginástica | Dois Irmãos RS</title>
+<meta name="description" content="Musculação, Hidroginástica e Natação Adulto e Infantil em Dois Irmãos RS. Estrutura completa, matrícula grátis e benefícios exclusivos. Entre em contato!">
+<meta name="keywords" content="academia Dois Irmãos, natação infantil Dois Irmãos, hidroginástica, musculação, Nativa Academia, escola de natação, treino, saúde, bem-estar, Dois Irmãos RS">
+<meta name="author" content="edusidegum">
+<meta name="theme-color" content="#c9a050">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://edusidegum.github.io/nativaacademia/">
+<meta name="geo.region" content="BR-RS">
+<meta name="geo.placename" content="Dois Irmãos">
+
+<!-- Open Graph -->
+<meta property="og:title" content="N'ativa Academia — Musculação, Natação e Hidroginástica | Dois Irmãos RS">
+<meta property="og:description" content="Musculação, Hidroginástica e Natação Adulto e Infantil. Estrutura completa com matrícula grátis. Venha fazer parte!">
+
+<meta property="og:image" content="https://edusidegum.github.io/nativaacademia/img/logonativa.webp">
+
+<meta name="twitter:image" content="https://edusidegum.github.io/nativaacademia/img/fachada.webp">
+
+"image": "https://edusidegum.github.io/nativaacademia/img/fachada.webp"
+
+
+<meta property="og:url" content="https://edusidegum.github.io/nativaacademia/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="N'ativa Academia">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="N'ativa Academia — Musculação, Natação e Hidroginástica | Dois Irmãos RS">
+<meta name="twitter:description" content="Musculação, Hidro, Natação Adulto e Infantil em Dois Irmãos RS. Matrícula grátis!">
+<meta name="twitter:image" content="https://edusidegum.github.io/nativaacademia/img/fachada.webp">
+
+<!-- Fontes: preconnect + carregamento assíncrono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"></noscript>
+
+<!-- ═══════════ CSS CRÍTICO + COMPLETO ═══════════ -->
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Open Sans', Arial, Helvetica, sans-serif; background: #f5f5f0; color: #1a1a1a; line-height: 1.6; }
+h1, h2, h3 { font-family: 'Montserrat', 'Arial Black', sans-serif; }
+
+/* ── VARIÁVEIS ── */
+:root {
+  --dourado: #c9a050;
+  --cobre: #b87333;
+  --escuro: #0d0d0d;
+  --whatsapp: #25d366;
+  --branco: #ffffff;
+  --cinza-claro: #f0ede6;
+  --cinza-medio: #8a8a7a;
+}
+
+/* ── TOPBAR FIXA ── */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; width: 100%; z-index: 999;
+  background: rgba(13, 13, 13, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(201, 160, 80, 0.2);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.topbar .logo-img {
+  height: 36px;
+  width: auto;
+}
+.topbar .logo {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--dourado);
+  letter-spacing: 2px;
+  white-space: nowrap;
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+.topbar .btn-wa-top {
+  background: var(--whatsapp);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 8px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s;
+}
+.topbar .btn-wa-top:hover { transform: scale(1.05); }
+
+/* ── MENU DROPDOWN ── */
+.menu-dropdown { position: relative; }
+.menu-toggle {
+  background: var(--cobre);
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.menu-toggle:hover { background: #9c5e2a; }
+.menu-lista {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6px;
+  background: #1a1a1a;
+  border: 1px solid rgba(201, 160, 80, 0.3);
+  border-radius: 8px;
+  list-style: none;
+  min-width: 170px;
+  z-index: 1001;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+.menu-lista li { border-bottom: 1px solid rgba(255,255,255,0.05); }
+.menu-lista li:last-child { border-bottom: none; }
+.menu-lista a {
+  display: block;
+  padding: 11px 16px;
+  color: #d6d6d6;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+.menu-lista a:hover { background: rgba(184, 115, 51, 0.15); color: #d4944a; }
+.menu-dropdown:focus-within .menu-lista,
+.menu-dropdown:hover .menu-lista { display: block; }
+
+/* ── HEADER SPACER ── */
+.header-spacer { height: 56px; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #2a2015 100%);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('img/fachada.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  filter: brightness(0.7);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 40px 24px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--branco);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.hero h1 span { color: var(--dourado); }
+.hero p {
+  font-size: 1.1rem;
+  color: #d6d6d6;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero .btn-cta {
+  display: inline-block;
+  background: var(--whatsapp);
+  color: #000;
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+.hero .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5); }
+
+/* ── SERVIÇOS ── */
+.servicos {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.servicos h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--escuro);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.servicos h2 span { color: var(--cobre); }
+.servicos .subtitulo {
+  text-align: center;
+  color: var(--cinza-medio);
+  margin-bottom: 48px;
+  font-size: 1rem;
+}
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+.card-servico {
+  background: var(--branco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  border: 1px solid rgba(201, 160, 80, 0.1);
+}
+.card-servico:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.12); }
+.card-servico img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card-servico .card-body { padding: 24px 20px; }
+.card-servico h3 {
+  font-size: 1.1rem;
+  color: var(--escuro);
+  margin-bottom: 8px;
+}
+.card-servico p { font-size: 0.92rem; color: #555; }
+
+/* ── GALERIA ── */
+.galeria {
+  background: var(--escuro);
+  padding: 80px 24px;
+}
+.galeria h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--branco);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.galeria h2 span { color: var(--dourado); }
+.galeria .subtitulo {
+  text-align: center;
+  color: #aaa;
+  margin-bottom: 48px;
+  font-size: 1rem;
+}
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.grid-galeria img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(201, 160, 80, 0.15);
+  transition: border-color 0.3s, transform 0.3s;
+}
+.grid-galeria img:hover { border-color: var(--dourado); transform: scale(1.02); }
+
+/* ── SOBRE ── */
+.sobre {
+  padding: 80px 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.sobre h2 {
+  font-size: 2rem;
+  color: var(--escuro);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.sobre h2 span { color: var(--cobre); }
+.sobre p {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.sobre .endereco {
+  background: var(--cinza-claro);
+  padding: 20px 28px;
+  border-radius: 10px;
+  margin-top: 28px;
+  font-weight: 600;
+  color: var(--escuro);
+}
+
+/* ── CTA FINAL ── */
+.cta-final {
+  background: linear-gradient(135deg, var(--cobre), #8b4513);
+  padding: 64px 24px;
+  text-align: center;
+}
+.cta-final h2 {
+  color: var(--branco);
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+.cta-final p { color: #f0e0c8; margin-bottom: 32px; font-size: 1.05rem; }
+.cta-final .btn-cta {
+  display: inline-block;
+  background: var(--whatsapp);
+  color: #000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 16px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Montserrat', 'Arial Black', sans-serif;
+}
+.cta-final .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5); }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--escuro);
+  padding: 28px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 160, 80, 0.15);
+}
+.footer p { color: #666; font-size: 0.82rem; }
+.footer a { color: var(--dourado); text-decoration: none; }
+.footer .social-links { margin-top: 12px; display: flex; justify-content: center; gap: 16px; }
+.footer .social-links a {
+  color: var(--dourado);
+  font-size: 1.4rem;
+  transition: color 0.2s;
+}
+.footer .social-links a:hover { color: var(--branco); }
+
+/* ── RESPONSIVO ── */
+@media (max-width: 600px) {
+  .topbar .logo { font-size: 0.7rem; letter-spacing: 1px; }
+  .hero h1 { font-size: 1.7rem; }
+  .servicos, .galeria, .sobre { padding: 50px 16px; }
+  .grid-galeria img { height: 200px; }
+}
+</style>
+
+<!-- JSON-LD Breadcrumb -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://edusidegum.github.io/nativaacademia/" },
+    { "@type": "ListItem", "position": 2, "name": "N'ativa Academia", "item": "https://edusidegum.github.io/nativaacademia/" }
+  ]
+}
+</script>
+
+<!-- JSON-LD LocalBusiness -->
+<script type="application/ld+json">
+{
+  {
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Nativa Academia",
+  "description": "Treinamento especializado, foco em performance e qualidade de vida. Infraestrutura completa para sua evolução física.",
+  "url": "https://edusidegum.github.io/nativaacademia/",
+  "priceRange": "$$",
+  "founder": {
+    "@type": "Person",
+    "name": "Evertom & Vagner",
+    "jobTitle": "Head Coach / Educador Físico"
+  },
+  "address": {
+    "@type": "93950000",
+    "addressLocality": "Dois Irmãos",
+    "addressRegion": "RS",
+    "addressCountry": "BR"
+  }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- ═══════════ TOPBAR FIXA ═══════════ -->
+<header class="topbar">
+  <img src="img/logonativa.webp" alt="N'ativa Academia" class="logo-img">
+  <nav class="menu-dropdown">
+    <button class="menu-toggle" aria-label="Abrir menu">Menu</button>
+    <ul class="menu-lista">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#sobre">Sobre Nós</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/555198987808?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20N'ativa%20Academia." class="btn-wa-top" target="_blank" rel="noopener noreferrer">
+    Fale Conosco
+  </a>
+</header>
+
+<div class="header-spacer"></div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-content">
+    <h1>N'<span>ativa</span> Academia</h1>
+    <p>Musculação • Hidroginástica • Natação Adulto e Infantil<br>📍 Dois Irmãos | RS</p>
+    <a href="https://wa.me/555198987808?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20planos%20da%20N'ativa%20Academia." class="btn-cta" target="_blank" rel="noopener noreferrer">
+      💬 Matrícula Grátis — Fale Conosco
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ SERVIÇOS ═══════════ -->
+<section class="servicos" id="servicos">
+  <h2>Nossos <span>Serviços</span></h2>
+  <p class="subtitulo">Tudo que você precisa em um só lugar</p>
+  <div class="grid-servicos">
+    <!-- Musculação -->
+    <div class="card-servico">
+      <img src="img/musculacao.webp" alt="Musculação na N'ativa Academia" loading="lazy">
+      <div class="card-body">
+        <h3>🏋️ Musculação</h3>
+        <p>Equipamentos modernos e estrutura completa para treinos de força, hipertrofia e condicionamento. Ambiente motivador para todos os níveis.</p>
+      </div>
+    </div>
+    <!-- Natação -->
+    <div class="card-servico">
+      <img src="img/piscina.webp" alt="Natação Infantil na N'ativa" loading="lazy">
+      <div class="card-body">
+        <h3>🏊 Natação</h3>
+        <p>Aulas para adultos e crianças. Desenvolvimento de confiança, coordenação e segurança em ambiente divertido e acolhedor. Do bebê ao atleta.</p>
+      </div>
+    </div>
+    <!-- Hidroginástica -->
+    <div class="card-servico">
+      <img src="img/banhos.webp" alt="Hidroginástica e Novos Horários" loading="lazy">
+      <div class="card-body">
+        <h3>💧 Hidroginástica</h3>
+        <p>Atividade de baixo impacto, ideal para todas as idades. Fortalece articulações, melhora o condicionamento e alivia o estresse do dia a dia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GALERIA ═══════════ -->
+<section class="galeria" id="galeria">
+  <h2>Nossa <span>Estrutura</span></h2>
+  <p class="subtitulo">Conheça o ambiente que vai te motivar a ir além</p>
+  <div class="grid-galeria">
+    <img src="img/musculacao2.webp" alt="Estrutura da academia" loading="lazy">
+    <img src="img/musculacao3.webp" alt="Nativa Day - Energia e treinos" loading="lazy">
+    <img src="img/musculacao4.webp" alt="Família em Movimento - Natação" loading="lazy">
+    <img src="img/musculacao5.webp" alt="Natação infantil - Aprendizado e diversão" loading="lazy">
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE ═══════════ -->
+<section class="sobre" id="sobre">
+  <h2>Sobre a <span>N'ativa</span></h2>
+  <p>
+    A <strong>N'ativa Academia e Escola de Natação</strong> nasceu com o propósito de
+    <strong>proporcionar saúde e bem-estar às pessoas</strong>. Acreditamos que cada conquista
+    merece ser celebrada e que aprender pode — e deve — ser divertido.
+  </p>
+  <p>
+    Seja na musculação, na hidroginástica ou nas aulas de natação para crianças e adultos,
+    oferecemos uma experiência completa com profissionais qualificados e estrutura que motiva.
+  </p>
+  <div class="endereco">
+  📍 <a href="https://maps.app.goo.gl/aYs7J1poM2ZAGZ557" target="_blank" rel="noopener noreferrer" style="color: var(--escuro); text-decoration: none;">R. São Leopoldo, 988 — Primavera, Dois Irmãos — RS</a>
+</div>
+
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section class="cta-final" id="contato">
+  <h2>Pronto para fazer parte?</h2>
+  <p>✅ Matrícula grátis &nbsp;|&nbsp; ✅ Valor promocional &nbsp;|&nbsp; ✅ Benefícios especiais</p>
+  <a href="https://wa.me/555198987808?text=Ol%C3%A1!%20Quero%20aproveitar%20a%20matr%C3%ADcula%20gr%C3%A1tis%20da%20N'ativa%20Academia!" class="btn-cta" target="_blank" rel="noopener noreferrer">
+    💬 Fale Conosco Agora
+  </a>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <p>&copy; 2021 N'Ativa Academia e Escola de Natação LTDA. Todos os direitos reservados.</p>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/nativaacademiadi/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
+    <a href="https://www.facebook.com/Nativaacademiadi/" target="_blank" rel="noopener noreferrer" title="Facebook">📘</a>
+  </div>
+</footer>
+
+<!-- ═══════════ SCRIPTS EXTERNOS ═══════════ -->
+<script src="https://edusidegum.github.io/demo/all/bloco-incluir-demo.js" defer></script>
+
+</body>
+</html>

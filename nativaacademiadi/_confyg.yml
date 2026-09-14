@@ -1,0 +1,17 @@
+# _config.yml — Projeto Visibilidade v2.3
+title: N'ativa Academia
+description: Musculação, Natação e Hidroginástica em Dois Irmãos/RS
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+permalink: pretty
+
+include:
+  - nativa.html
+  - index.html
+  - privacidade.html
+  - robots.txt
+  - llms.txt
+  - llms-full.txt
+  - sitemap.xml
+  - assets/

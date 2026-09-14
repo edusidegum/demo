@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="N'Ativa Academia — Musculação, Hidroginástica e Natação Adulto e Infantil em Dois Irmãos/RS. Estrutura completa desde 1998.">
+  <meta name="author" content="Eduardo Sidegum">
+  <meta name="DC.creator" content="Eduardo Sidegum">
+  <meta name="geo.region" content="BR-RS">
+  <meta name="geo.placename" content="Dois Irmãos">
+  <meta name="geo.position" content="-29.5841;-51.0903">
+  <meta name="ICBM" content="-29.5841, -51.0903">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://edusidegum.github.io/demo/nativaacademiadi/">
+  <link rel="author" href="https://edusidegum.github.io/edusidegum/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>N'Ativa Academia — Musculação, Hidro e Natação em Dois Irmãos/RS</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="N'Ativa Academia — Musculação, Hidro e Natação em Dois Irmãos/RS">
+  <meta property="og:description" content="Musculação, Hidroginástica e Natação Adulto e Infantil. Estrutura completa desde 1998 no bairro Primavera em Dois Irmãos/RS.">
+  <meta property="og:url" content="https://edusidegum.github.io/demo/nativaacademiadi/">
+  <meta property="og:image" content="https://edusidegum.github.io/demo/nativaacademiadi/og-image.webp">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="N'Ativa Academia">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="N'Ativa Academia — Musculação, Hidro e Natação em Dois Irmãos/RS">
+  <meta name="twitter:description" content="Musculação, Hidroginástica e Natação Adulto e Infantil. Estrutura completa desde 1998.">
+  <meta name="twitter:image" content="https://edusidegum.github.io/demo/nativaacademiadi/og-image.webp">
+
+  <!-- Content-Security-Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://edusidegum.github.io; connect-src 'self'; frame-src https://www.google.com;">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+              800: '#1e3a8a',
+              900: '#172554',
+            },
+            accent: {
+              50: '#fdf4ff',
+              100: '#fae8ff',
+              200: '#f5d0fe',
+              300: '#f0abfc',
+              400: '#e879f9',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              800: '#6b21a8',
+              900: '#581c87',
+            }
+          },
+          fontFamily: {
+            display: ['Merriweather', 'Georgia', 'serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-parallax {
+        background-attachment: fixed;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-parallax {
+        background-attachment: scroll;
+      }
+    }
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: #1d4ed8;
+      color: #fff;
+      padding: 8px 16px;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 50;
+    }
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-float a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    }
+    #redirect-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #1e3a8a;
+      color: #fff;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      z-index: 40;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+  </style>
+</head>
+<body class="font-body bg-gray-50 text-gray-800 antialiased">
+
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+
+  <!-- Hero Section -->
+  <header class="hero-parallax relative min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://edusidegum.github.io/demo/nativaacademiadi/img/fachada.webp');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/70"></div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <img src="https://edusidegum.github.io/demo/nativaacademiadi/img/logonativa.webp" alt="Logo N'Ativa Academia" class="mx-auto mb-6 w-32 h-auto" width="128" height="128">
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight">
+        N'Ativa Academia
+      </h1>
+      <p class="text-lg md:text-2xl text-blue-200 font-medium mb-8">
+        Musculação &bull; Hidroginástica &bull; Natação Adulto e Infantil
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://wa.me/5551985850364?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20N'Ativa%20Academia." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all duration-200 min-h-[48px]">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+        <a href="https://www.instagram.com/nativaacademiadi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg transition-all duration-200 min-h-[48px]">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Sobre -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="sobre-heading">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 id="sobre-heading" class="font-display text-3xl md:text-4xl font-black text-brand-800 text-center mb-12">Sobre a N'Ativa</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Desde <strong>1998</strong>, a N'Ativa Academia oferece estrutura completa para sua saúde e bem-estar no bairro Primavera, em Dois Irmãos/RS. Com profissionais qualificados e ambiente acolhedor, somos referência em musculação, hidroginástica e natação para todas as idades.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Nosso compromisso é com resultados: turmas reduzidas, acompanhamento individualizado e equipamentos modernos para que você alcance seus objetivos com segurança.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+              <div class="text-3xl font-black text-brand-600 mb-1">1998</div>
+              <div class="text-sm text-gray-500">Fundação</div>
+            </div>
+            <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+              <div class="text-3xl font-black text-brand-600 mb-1">3</div>
+              <div class="text-sm text-gray-500">Modalidades</div>
+            </div>
+            <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+              <div class="text-3xl font-black text-brand-600 mb-1">450m²</div>
+              <div class="text-sm text-gray-500">Estrutura</div>
+            </div>
+            <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+              <div class="text-3xl font-black text-brand-600 mb-1">+500</div>
+              <div class="text-sm text-gray-500">Alunos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estrutura -->
+    <section class="py-20 md:py-28 bg-gray-50" aria-labelledby="estrutura-heading">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 id="estrutura-heading" class="font-display text-3xl md:text-4xl font-black text-brand-800 text-center mb-12">Nossa Estrutura</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="https://edusidegum.github.io/demo/nativaacademiadi/img/musculacao.webp" alt="Sala de musculação" class="w-full h-48 object-cover" loading="lazy" width="600" height="300">
+            <div class="p-5">
+              <h3 class="font-display text-xl font-bold text-brand-700 mb-2">Musculação</h3>
+              <p class="text-gray-600 text-sm">Equipamentos modernos e acompanhamento profissional para todos os níveis.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="https://edusidegum.github.io/demo/nativaacademiadi/img/piscina.webp" alt="Piscina para hidroginástica e natação" class="w-full h-48 object-cover" loading="lazy" width="600" height="300">
+            <div class="p-5">
+              <h3 class="font-display text-xl font-bold text-brand-700 mb-2">Piscina</h3>
+              <p class="text-gray-600 text-sm">Hidroginástica e natação adulto e infantil em piscina coberta e aquecida.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <img src="https://edusidegum.github.io/demo/nativaacademiadi/img/banhos.webp" alt="Vestiários e banheiros" class="w-full h-48 object-cover" loading="lazy" width="600" height="300">
+            <div class="p-5">
+              <h3 class="font-display text-xl font-bold text-brand-700 mb-2">Vestiários</h3>
+              <p class="text-gray-600 text-sm">Banheiros amplos, vestiários completos e armários para sua comodidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horários -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="horarios-heading">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 id="horarios-heading" class="font-display text-3xl md:text-4xl font-black text-brand-800 text-center mb-12">Horários de Funcionamento</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+            <h3 class="font-display text-lg font-bold text-brand-700 mb-3">Segunda a Quinta</h3>
+            <p class="text-gray-600 text-sm">05:30 - 13:00</p>
+            <p class="text-gray-600 text-sm">14:00 - 22:00</p>
+          </div>
+          <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+            <h3 class="font-display text-lg font-bold text-brand-700 mb-3">Sexta-feira</h3>
+            <p class="text-gray-600 text-sm">05:30 - 13:00</p>
+            <p class="text-gray-600 text-sm">14:00 - 21:00</p>
+          </div>
+          <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+            <h3 class="font-display text-lg font-bold text-brand-700 mb-3">Sábado</h3>
+            <p class="text-gray-600 text-sm">07:30 - 12:30</p>
+          </div>
+          <div class="bg-brand-50 rounded-2xl p-6 text-center shadow-sm">
+            <h3 class="font-display text-lg font-bold text-brand-700 mb-3">Domingo</h3>
+            <p class="text-gray-600 text-sm">Fechado</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="py-20 md:py-28 bg-gradient-to-r from-pink-500 to-orange-500" aria-labelledby="instagram-heading">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h2 id="instagram-heading" class="font-display text-3xl md:text-4xl font-black text-white mb-6">Acompanhe no Instagram</h2>
+        <p class="text-lg text-pink-100 mb-8">Dicas, novidades e o dia a dia da academia. Atualizamos sempre por lá.</p>
+        <a href="https://www.instagram.com/nativaacademiadi/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-pink-600 font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 min-h-[48px]">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @nativaacademiadi
+        </a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="py-20 md:py-28 bg-white" aria-labelledby="contato-heading">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 id="contato-heading" class="font-display text-3xl md:text-4xl font-black text-brand-800 text-center mb-12">Contato</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-brand-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <div>
+                <h3 class="font-semibold text-gray-800">Endereço</h3>
+                <p class="text-gray-600">R. São Leopoldo, 988 — Primavera<br>Dois Irmãos — RS, 93950-000</p>
+                <a href="https://www.google.com/maps?q=R.+S%C3%A3o+Leopoldo,+988+-+Primavera,+Dois+Irm%C3%A3os+-+RS,+93950-000" target="_blank" rel="noopener noreferrer" class="text-brand-600 text-sm underline hover:text-brand-800 transition-colors">Ver no Google Maps</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <svg class="w-6 h-6 text-brand-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <div>
+                <h3 class="font-semibold text-gray-800">Telefone / WhatsApp</h3>
+                <p class="text-gray-600">
+                  <a href="tel:+5551985850364" class="text-brand-600 underline hover:text-brand-800 transition-colors">(51) 98585-0364</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md h-64 md:h-auto">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.5!2d-51.0903!3d-29.5841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDM1JzAyLjgiUyA1McKwMDUnMjUuMSJX!5e0!3m2!1spt-BR!2sbr!4v1690000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da N'Ativa Academia no Google Maps" aria-label="Mapa com localização da academia"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brand-900 text-white py-12" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h3 class="font-display text-lg font-bold mb-3">N'Ativa Academia</h3>
+          <p class="text-sm text-gray-300">Musculação &bull; Hidroginástica &bull; Natação</p>
+          <p class="text-sm text-gray-300 mt-2">R. São Leopoldo, 988 — Primavera<br>Dois Irmãos — RS, 93950-000</p>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold mb-3">Links</h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><a href="https://www.instagram.com/nativaacademiadi/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline">Instagram @nativaacademiadi</a></li>
+            <li><a href="https://wa.me/5551985850364" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline">WhatsApp</a></li>
+            <li><a href="politica.html" class="hover:text-white transition-colors underline">Política de Privacidade</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-lg font-bold mb-3">Informações</h3>
+          <p class="text-sm text-gray-300">CNPJ: 02.276.965/0001-37</p>
+          <p class="text-sm text-gray-300">Desde 1998</p>
+        </div>
+      </div>
+      <div class="border-t border-brand-700 pt-6 text-center">
+        <p class="text-xs text-gray-400">
+          Desenvolvido por <a href="https://edusidegum.github.io/edusidegum/" target="_blank" rel="noopener noreferrer" class="underline hover:text-white transition-colors">&lt;e/&gt; esid</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+    <a href="https://wa.me/5551985850364?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20N'Ativa%20Academia." target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+      <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <!-- LGPD Banner -->
+  <div id="lgpd-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white z-30" style="display:none;" role="alert" aria-live="polite">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-sm text-gray-300">
+        Utilizamos cookies essenciais para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica.html" class="underline hover:text-white transition-colors">Política de Privacidade</a>.
+      </p>
+      <button id="lgpd-accept" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-6 py-2 rounded-full transition-colors flex-shrink-0 min-h-[40px]">
+        Aceitar
+      </button>
+    </div>
+  </div>
+
+  <!-- Redirect Bar -->
+  <div id="redirect-bar" style="display:none;" aria-live="polite">
+    Redirecionando para Instagram em <span id="redirect-countdown">25</span>s
+  </div>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "N'Ativa Academia — Musculação, Hidro e Natação em Dois Irmãos/RS",
+    "url": "https://edusidegum.github.io/demo/nativaacademiadi/",
+    "author": {
+      "@type": "Person",
+      "name": "Eduardo Sidegum",
+      "jobTitle": "Arquiteto de Sistemas de Informação (B.el) 360 Vision, Vibe Coder, AI Hard Assisted",
+      "url": "https://edusidegum.github.io/edusidegum/"
+    },
+    "mainEntity": {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://edusidegum.github.io/demo/nativaacademiadi/#business",
+      "name": "N'Ativa Academia",
+      "description": "Academia com musculação, hidroginástica e natação adulto e infantil no bairro Primavera em Dois Irmãos/RS. Desde 1998.",
+      "url": "https://edusidegum.github.io/demo/nativaacademiadi/",
+      "telephone": "+5551985850364",
+      "priceRange": "R$80-R$150",
+      "currenciesAccepted": "BRL",
+      "image": "https://edusidegum.github.io/demo/nativaacademiadi/og-image.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. São Leopoldo, 988",
+        "addressLocality": "Dois Irmãos",
+        "addressRegion": "RS",
+        "postalCode": "93950-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -29.5841,
+        "longitude": -51.0903
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "05:30", "closes": "13:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "14:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "05:30", "closes": "13:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "14:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "07:30", "closes": "12:30" }
+      ],
+      "sameAs": ["https://www.instagram.com/nativaacademiadi/"],
+      "author": {
+        "@type": "Person",
+        "name": "Eduardo Sidegum",
+        "jobTitle": "Arquiteto de Sistemas de Informação (B.el) 360 Vision, Vibe Coder, AI Hard Assisted",
+        "url": "https://edusidegum.github.io/edusidegum/"
+      },
+      "foundingDate": "1998"
+    }
+  }
+  </script>
+
+  <!-- Redirect & LGPD JS -->
+  <script>
+    (function() {
+      // LGPD
+      var banner = document.getElementById('lgpd-banner');
+      var acceptBtn = document.getElementById('lgpd-accept');
+      if (!localStorage.getItem('lgpd-accepted')) {
+        banner.style.display = 'block';
+      }
+      if (acceptBtn) {
+        acceptBtn.addEventListener('click', function() {
+          localStorage.setItem('lgpd-accepted', '1');
+          banner.style.display = 'none';
+        });
+      }
+
+      // Redirect
+      var REDIRECT_URL = 'https://www.instagram.com/nativaacademiadi/';
+      var redirectBar = document.getElementById('redirect-bar');
+      var countdownEl = document.getElementById('redirect-countdown');
+      var delay = 20000 + Math.floor(Math.random() * 10000);
+      var remaining = Math.ceil(delay / 1000);
+      var redirectTimer;
+      var countdownInterval;
+      var userInteracted = false;
+
+      function cancelRedirect() {
+        userInteracted = true;
+        if (redirectTimer) clearTimeout(redirectTimer);
+        if (countdownInterval) clearInterval(countdownInterval);
+        if (redirectBar) redirectBar.style.display = 'none';
+      }
+
+      function startRedirect() {
+        if (redirectBar && countdownEl) {
+          redirectBar.style.display = 'block';
+          countdownEl.textContent = remaining;
+          countdownInterval = setInterval(function() {
+            remaining--;
+            if (remaining <= 0) {
+              clearInterval(countdownInterval);
+            } else {
+              countdownEl.textContent = remaining;
+            }
+          }, 1000);
+        }
+
+        redirectTimer = setTimeout(function() {
+          if (!userInteracted) {
+            window.location.href = REDIRECT_URL;
+          }
+        }, delay);
+      }
+
+      // Preserve selectors
+      var preserveSelectors = [
+        '.whatsapp-float a',
+        '#lgpd-banner button',
+        '#lgpd-banner a',
+        'footer a',
+        '.skip-link',
+        'a[href^="tel:"]',
+        'a[href^="https://wa.me"]',
+        'a[href^="mailto:"]'
+      ];
+
+      document.addEventListener('click', function(e) {
+        var el = e.target;
+        while (el && el !== document.body) {
+          for (var i = 0; i < preserveSelectors.length; i++) {
+            if (el.matches && el.matches(preserveSelectors[i])) {
+              cancelRedirect();
+              return;
+            }
+          }
+          el = el.parentElement;
+        }
+        cancelRedirect();
+        window.location.href = REDIRECT_URL;
+      });
+
+      startRedirect();
+    })();
+  </script>
+
+</body>
+</html>

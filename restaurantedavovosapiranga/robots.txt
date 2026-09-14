@@ -1,0 +1,53 @@
+# robots.txt — Restaurante da Vovó
+# Governanca granular por crawler de IA. Decisao documentada: llms.txt nao utilizado;
+# governanca centralizada via robots.txt conforme FreePME v4.0.
+
+User-agent: *
+Allow: /
+Disallow: /politica.html
+
+# Bloqueio de crawlers de IA
+User-agent: GPTBot
+allow: /
+
+User-agent: ChatGPT-User
+allow: /
+
+User-agent: Claude-Web
+allow: /
+
+User-agent: ClaudeBot
+allow: /
+
+User-agent: anthropic-ai
+allow: /
+
+User-agent: Google-Extended
+allow: /
+
+User-agent: CCBot
+allow: /
+
+User-agent: FacebookBot
+allow: /
+
+User-agent: Bytespider
+allow: /
+
+User-agent: PerplexityBot
+allow: /
+
+User-agent: YouBot
+allow: /
+
+User-agent: cohere-ai
+allow: /
+
+User-agent: Diffbot
+allow: /
+
+User-agent: ImagesiftBot
+allow: /
+
+# Sitemap
+Sitemap: https://edusidegum.github.io/demo/restaurantedavovosapiranga/sitemap.xml

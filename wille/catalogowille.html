@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo — Cachaçaria Wille | Linhas Prata, Ouro, Premium e Licores</title>
+
+    <!-- Segurança -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- SEO: indexável para buscadores (conforme robots.txt), sem tags para LLM -->
+    <meta name="description" content="Catálogo da Cachaçaria Wille (Poço das Antas · RS). Cachaças artesanais envelhecidas em 5 madeiras nobres e licores. Compre direto pelo WhatsApp.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edusidegum.github.io/demo/wille/catalogo.html">
+    <meta name="theme-color" content="#7a1f1f">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Catálogo — Cachaçaria Wille">
+    <meta property="og:description" content="Cachaças artesanais envelhecidas em 5 madeiras nobres e licores. Compre direto pelo WhatsApp.">
+    <meta property="og:image" content="https://edusidegum.github.io/demo/wille/img/catalogo_capa.png">
+    <meta property="og:url" content="https://edusidegum.github.io/demo/wille/catalogo.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catálogo — Cachaçaria Wille">
+    <meta name="twitter:description" content="Cachaças artesanais envelhecidas em 5 madeiras nobres e licores. Compre direto pelo WhatsApp.">
+    <meta name="twitter:image" content="https://edusidegum.github.io/demo/wille/img/catalogo_capa.png">
+
+    <!-- Autor e contexto do projeto -->
+    <meta name="author" content="e-sid Tech — Arquitetura de Soluções Digitais">
+
+    <!-- JSON-LD: LocalBusiness (único bloco) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Cachaçaria Wille",
+      "description": "Alambique premium de cachaças artesanais e licores, envelhecidas em 5 madeiras nobres (Carvalho, Amburana, Bálsamo, Cabriúva e Grápia).",
+      "url": "https://edusidegum.github.io/demo/wille/catalogo.html",
+      "telephone": "+5551992931816",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Poço das Antas",
+        "addressRegion": "RS",
+        "addressCountry": "BR"
+      },
+      "areaServed": { "@type": "City", "name": "Poço das Antas" },
+      "sameAs": [
+        "https://www.instagram.com/cachacawille/",
+        "https://wa.me/5551992931816"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Eduardo Sidegum",
+        "url": "https://edusidegum.github.io/edusidegum/"
+      }
+    }
+    </script>
+
+    <!-- CSS do projeto (se existir) + fallback scoped para o catálogo -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #faf7f2;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .cat-header {
+            background: #7a1f1f;
+            color: #fff;
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .cat-header .brand { font-weight: 700; font-size: 1.1rem; }
+        .cat-header .brand small { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.85; }
+        .cat-header a { color: #fff; text-decoration: none; font-weight: 600; }
+        .cat-header a:hover { text-decoration: underline; }
+        main { flex: 1; }
+        .cat-container { max-width: 960px; margin: 0 auto; padding: 32px 20px 72px; }
+        .cat-hero { text-align: center; margin-bottom: 32px; }
+        .cat-hero h1 { font-size: 2rem; color: #1a1a1a; margin-bottom: 8px; }
+        .cat-hero p { color: #666; margin-bottom: 20px; }
+        .cat-cta {
+            display: inline-block;
+            padding: 13px 30px;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .cat-cta:hover { background: #1ebe5d; }
+        .cat-cover { margin: 24px auto 40px; max-width: 640px; }
+        .cat-cover img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .cat-item {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .cat-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.14); }
+        .cat-item img { width: 100%; height: auto; display: block; }
+        .cat-item figcaption {
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: #7a1f1f;
+            font-weight: 600;
+            text-align: center;
+            border-top: 1px solid #f0ece6;
+        }
+        .cat-note { margin-top: 32px; text-align: center; font-size: 0.85rem; color: #888; }
+        .cat-footer {
+            text-align: center;
+            padding: 20px 16px;
+            font-size: 0.82rem;
+            color: #999;
+            border-top: 1px solid #e8e2da;
+        }
+        .cat-footer a { color: #7a1f1f; text-decoration: none; font-weight: 500; }
+        .cat-footer a:hover { text-decoration: underline; }
+
+        /* Botão flutuante de WhatsApp */
+        .wa-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: #fff;
+            padding: 13px 18px;
+            border-radius: 50px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.15s, background 0.15s;
+        }
+        .wa-float:hover { background: #1ebe5d; transform: translateY(-2px); }
+        .wa-float svg { width: 24px; height: 24px; fill: #fff; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+    <header class="cat-header">
+        <div class="brand">Cachaçaria Wille<small>Alambique Premium · Poço das Antas · RS</small></div>
+        <a href="https://www.instagram.com/cachacawille/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </header>
+
+    <main>
+        <div class="cat-container">
+            <section class="cat-hero">
+                <h1>Catálogo — Cachaçaria Wille</h1>
+                <p>Cachaças artesanais envelhecidas em 5 madeiras nobres e licores especiais.<br>Toque em qualquer imagem para comprar pelo WhatsApp.</p>
+                <a class="cat-cta" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">💬 Comprar pelo WhatsApp</a>
+            </section>
+
+            <!-- Capa do catálogo -->
+            <a class="cat-cover" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer" aria-label="Ver capa do catálogo e comprar pelo WhatsApp">
+                <img src="img/catalogo_capa.png" alt="Capa do catálogo da Cachaçaria Wille — Alambique Premium, Poço das Antas RS" loading="eager">
+            </a>
+
+            <!-- Grade de páginas do catálogo -->
+            <section class="cat-grid" aria-label="Páginas do catálogo da Cachaçaria Wille">
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_resumo.png" alt="Resumo do catálogo de cachaças artesanais da Cachaçaria Wille" loading="lazy">
+                        <figcaption>Resumo do catálogo — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linhas.png" alt="Visão geral das linhas de cachaça da Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linhas da casa — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linha_prata.png" alt="Linha Prata de cachaça artesanal — Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linha Prata — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linha_ouro.png" alt="Linha Ouro de cachaça artesanal — Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linha Ouro — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linha_premium.png" alt="Linha Premium de cachaça envelhecida — Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linha Premium — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linha_extra_premium.png" alt="Linha Extra Premium de cachaça envelhecida — Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linha Extra Premium — clique para comprar</figcaption>
+                    </figure>
+                </a>
+                <a class="cat-item" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer">
+                    <figure>
+                        <img src="img/catalogo_linha_licores.png" alt="Linha de licores — Cachaçaria Wille" loading="lazy">
+                        <figcaption>Linha Licores — clique para comprar</figcaption>
+                    </figure>
+                </a>
+            </section>
+
+            <p class="cat-note">Preços e disponibilidade sob consulta. Atendimento direto pelo WhatsApp.</p>
+        </div>
+    </main>
+
+    <!-- Botão flutuante de WhatsApp -->
+    <a class="wa-float" href="https://wa.me/5551992931816?text=Quero%20Comprar%20uma%20Cacha%C3%A7a" target="_blank" rel="noopener noreferrer" aria-label="Comprar uma cachaça pelo WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Comprar</span>
+    </a>
+
+    <footer class="cat-footer">
+        <p>Cachaçaria Wille — Poço das Antas · Rio Grande do Sul · Selo Cachaça Premium Gaúcha 2025</p>
+        <p>Site por <a href="https://edusidegum.github.io/edusidegum/" target="_blank" rel="noopener noreferrer">e-sid Tech — Arquitetura de Soluções Digitais</a></p>
+    </footer>
+</body>
+</html>

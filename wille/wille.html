@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cachacaria Wille — Alambique Premium | Poco das Antas · RS</title>
+  <meta name="description" content="Descubra a Cachacaria Wille em Poco das Antas. Cachacas artesanais premiadas, envelhecidas em 5 madeiras nobres. Tradicao e qualidade premium do Vale do Taquari.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+  <link rel="canonical" href="https://edusidegum.github.io/demo/wille/wille.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://edusidegum.github.io/demo/wille/wille.html">
+  <link rel="alternate" hreflang="x-default" href="https://edusidegum.github.io/demo/wille/wille.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cachacaria Wille — Alambique Premium | Poco das Antas · RS">
+  <meta property="og:description" content="Tradicao e excelencia em cachaca artesanal. Conheca nossas 5 madeiras e premiacoes.">
+  <meta property="og:url" content="https://edusidegum.github.io/demo/wille/wille.html">
+  <meta property="og:image" content="https://edusidegum.github.io/demo/wille/img/Wille_capa.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cachacaria Wille — Alambique Premium">
+  <meta name="twitter:image" content="https://edusidegum.github.io/demo/wille/img/Wille_capa.png">
+
+  <link rel="preload" as="image" href="img/Wille_capa.png" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://edusidegum.github.io/demo/wille/#business",
+        "name": "Cachacaria Wille",
+        "image": "https://edusidegum.github.io/demo/wille/img/Wille_capa.png",
+        "url": "https://edusidegum.github.io/demo/wille/wille.html",
+        "telephone": "+5551992931816",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Poco das Antas",
+          "addressLocality": "Poco das Antas",
+          "addressRegion": "RS",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -29.4478,
+          "longitude": -51.6754
+        },
+        "sameAs": [
+          "https://www.instagram.com/cachacawille/",
+          "https://maps.app.goo.gl/6hLHE38CHxskB2rA8"
+        ]
+      },
+      {
+        "@type": "Product",
+        "name": "Cachaca Wille Premium",
+        "description": "Cachaca artesanal envelhecida em 5 madeiras.",
+        "brand": { "@type": "Brand", "name": "Wille" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://edusidegum.github.io/edusidegum/#person",
+        "name": "Eduardo Sidegum",
+        "url": "https://edusidegum.github.io/edusidegum/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --gold: #c9a050;
+      --gold-light: #e0c878;
+      --copper: #b87333;
+      --dark: #0d0d0d;
+      --dark-warm: #1a0f0a;
+      --text: #e0d5c1;
+      --text-muted: #a09080;
+      --surface: rgba(255, 255, 255, 0.04);
+      --radius: 16px;
+      --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', serif;
+      background-color: var(--dark);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0; width: 100%;
+      background: rgba(13, 13, 13, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--surface);
+    }
+    .logo { font-weight: 800; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
+    .nav a { color: var(--text); text-decoration: none; margin-left: 1.5rem; font-size: 0.9rem; transition: 0.3s; }
+    .nav a:hover { color: var(--gold); }
+
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 120%;
+      background: url('img/Wille_capa.png') center/cover no-repeat;
+      z-index: -1;
+      filter: brightness(0.4);
+      will-change: transform;
+    }
+    .hero-content { max-width: 900px; padding: 2rem; }
+    .hero h1 { font-size: clamp(3rem, 10vw, 5.5rem); color: var(--gold); margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; color: var(--gold-light); margin-bottom: 2.5rem; text-transform: uppercase; letter-spacing: 3px; }
+
+    .btn {
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-block;
+      margin: 0.5rem;
+    }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), var(--copper)); color: var(--dark); }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(201, 160, 80, 0.3); }
+    .btn-outline { border: 2px solid var(--gold); color: var(--gold); }
+    .btn-outline:hover { background: var(--gold); color: var(--dark); }
+
+    section { padding: 8rem 10%; }
+    .section-header { text-align: center; margin-bottom: 5rem; }
+    .section-header h2 { font-size: 3rem; color: var(--gold); margin-bottom: 1.5rem; }
+    .section-header p { max-width: 700px; margin: 0 auto; color: var(--text-muted); }
+
+    .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 2rem; }
+    .bento-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      border: 1px solid var(--surface);
+      transition: var(--transition);
+    }
+    .bento-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+    .bento-card img { width: 100%; border-radius: 12px; margin-bottom: 1.5rem; }
+
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    .col-12 { grid-column: span 12; }
+
+    .madeiras-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+    .madeira-item { background: var(--surface); padding: 2rem; border-radius: var(--radius); text-align: center; }
+    .madeira-item h4 { color: var(--gold); margin-bottom: 0.5rem; }
+
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+    .reveal { opacity: 0; transform: translateY(40px); transition: 1s all ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    footer { background: var(--dark-warm); padding: 5rem 10% 3rem; text-align: center; border-top: 1px solid var(--surface); }
+    .footer-logo { font-size: 2rem; color: var(--gold); margin-bottom: 1rem; }
+    .credito-final { font-size: 0.85rem; color: var(--text-muted); margin-top: 3rem; }
+    .credito-final a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .col-6, .col-4 { grid-column: span 12; }
+      section { padding: 5rem 5%; }
+      .hero h1 { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="#" class="logo">WILLE</a>
+    <div class="nav">
+      <a href="#historia">Historia</a>
+      <a href="#qualidade">Qualidade</a>
+      <a href="#madeiras">Madeiras</a>
+      <a href="https://wa.me/5551992931816" class="btn-gold btn" style="padding: 0.5rem 1rem; margin: 0;">WhatsApp</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-content">
+      <p class="reveal">Alambique Premium</p>
+      <h1 class="reveal">Cachacaria Wille</h1>
+      <div class="btn-group reveal">
+        <a href="https://wa.me/5551992931816" class="btn btn-gold">Quero Comprar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="historia">
+      <div class="bento-grid">
+        <div class="col-6 reveal">
+          <h2 style="color: var(--gold); font-size: 2.5rem; margin-bottom: 2rem;">Onde tudo comeca</h2>
+          <p>No coracao do Vale do Taquari, em Poco das Antas, a Cachacaria Wille preserva a arte da destilacao artesanal. Cada gota carrega a historia de uma terra generosa e o rigor de um processo que nao aceita atalhos.</p>
+          <p style="margin-top: 1.5rem; font-style: italic; color: var(--gold-light);">"A alma da cana encontra a perfeicao da madeira."</p>
+        </div>
+        <div class="col-6 reveal">
+          <img src="img/Wille_capa.png" alt="Alambique Wille" style="width: 100%; border-radius: var(--radius);">
+        </div>
+      </div>
+    </section>
+
+    <section id="qualidade" style="background: var(--dark-warm);">
+      <div class="section-header reveal">
+        <h2>Excelencia Reconhecida</h2>
+        <p>Nossas cachacas sao submetidas aos mais rigorosos testes de paladar, conquistando admiradores e especialistas.</p>
+      </div>
+      <div class="bento-grid">
+        <div class="col-4 bento-card reveal">
+          <h3>Selo Premium 2025</h3>
+          <p>Certificacao de qualidade superior em processos de destilacao e envelhecimento.</p>
+        </div>
+        <div class="col-4 bento-card reveal">
+          <h3>Testes as Cegas</h3>
+          <p>Destaque em avaliacoes sensoriais pela complexidade de aromas e suavidade.</p>
+        </div>
+        <div class="col-4 bento-card reveal">
+          <h3>5 Premiacoes</h3>
+          <p>Reconhecimento em concursos regionais e nacionais de cachacas artesanais.</p>
+        </div>
+        <div class="col-12 reveal">
+          <img src="img/wille_premiadas.png" alt="Cachacas Premiadas Wille" style="width: 100%; max-height: 500px; object-fit: contain;">
+        </div>
+      </div>
+    </section>
+
+    <section id="madeiras">
+      <div class="section-header reveal">
+        <h2>O Segredo Esta na Madeira</h2>
+        <p>O envelhecimento e uma arte. Utilizamos 5 madeiras nobres para criar blends inesqueciveis.</p>
+      </div>
+      <div class="reveal" style="text-align: center; margin-bottom: 4rem;">
+        <img src="img/wille_blend5madeiras.png" alt="Blend 5 Madeiras" style="max-width: 100%; border-radius: var(--radius);">
+      </div>
+      <div class="madeiras-grid reveal">
+        <div class="madeira-item"><h4>Carvalho</h4><p>Notas de baunilha e coco.</p></div>
+        <div class="madeira-item"><h4>Amburana</h4><p>Aroma adocicado e canela.</p></div>
+        <div class="madeira-item"><h4>Balsamo</h4><p>Toque herbaceo e especiarias.</p></div>
+        <div class="madeira-item"><h4>Cabriuva</h4><p>Frutado e floral intenso.</p></div>
+        <div class="madeira-item"><h4>Grapia</h4><p>Cor dourada e corpo macio.</p></div>
+      </div>
+    </section>
+
+    <section id="videos" style="background: var(--dark-warm);">
+      <div class="section-header reveal">
+        <h2>Nossa Paixao em Video</h2>
+      </div>
+      <div class="bento-grid">
+        <div class="col-12 reveal">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/BorTogSoyic" allowfullscreen></iframe>
+          </div>
+          <h4 style="text-align: center; margin-bottom: 2rem;">A Paixao por Tras da Marca</h4>
+        </div>
+        <div class="col-6 reveal">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/kWDQQf5ZIPc" allowfullscreen></iframe>
+          </div>
+          <h4 style="text-align: center;">Conheca o Alambique</h4>
+        </div>
+        <div class="col-6 reveal">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/fBw2exYsqRE" allowfullscreen></iframe>
+          </div>
+          <h4 style="text-align: center;">O Que a Imprensa Diz</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" style="text-align: center;">
+      <div class="reveal">
+        <img src="img/Wille_capa.png" alt="Catalogo Wille" style="max-width: 300px; margin-bottom: 2rem; border-radius: var(--radius);">
+        <h2 style="color: var(--gold); font-size: 2.5rem; margin-bottom: 1rem;">Catalogo Wille</h2>
+        <p style="margin-bottom: 2rem;">Conheca nossa linha completa de produtos.</p>
+        <a href="em_obras.html" class="btn btn-outline">Acessar Catalogo</a>
+      </div>
+    </section>
+
+    <section id="contato" style="text-align: center; background: var(--dark-warm);">
+      <div class="reveal">
+        <h2 style="font-size: 3rem; color: var(--gold); margin-bottom: 2rem;">Pronto para viver essa experiencia?</h2>
+        <p style="margin-bottom: 3rem;">Leve a tradicao de Poco das Antas para sua mesa.</p>
+        <a href="https://wa.me/5551992931816" class="btn btn-gold">Quero Comprar Agora</a>
+        <a href="https://maps.app.goo.gl/6hLHE38CHxskB2rA8" class="btn btn-outline" target="_blank">Como Chegar</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">WILLE</div>
+    <p>Poco das Antas · Rio Grande do Sul</p>
+    <p style="color: var(--gold-light); margin-top: 1rem;">Selo Premium 2025</p>
+    <div class="credito-final">
+      Projeto digital por <a href="https://edusidegum.github.io/edusidegum/" rel="author">Edu Sidegum — Arquiteto de Solucoes Digitais</a>
+    </div>
+    <p style="font-size: 0.7rem; margin-top: 2rem; opacity: 0.3;">&copy; 2026 Cachacaria Wille. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      var scroll = window.pageYOffset;
+      var heroBg = document.getElementById('heroBg');
+      if (heroBg) {
+        heroBg.style.transform = 'translateY(' + (scroll * 0.4) + 'px)';
+      }
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    if (!localStorage.getItem('cookieWille')) {
+      var banner = document.createElement('div');
+      banner.style.cssText = "position:fixed; bottom:20px; left:20px; right:20px; background:var(--dark-warm); color:var(--text); padding:20px; border-radius:12px; z-index:9999; display:flex; justify-content:space-between; align-items:center; border:1px solid var(--gold);";
+      banner.innerHTML = '<span>Utilizamos cookies para melhorar sua experiencia.</span><button id="okCookie" style="background:var(--gold); border:none; padding:8px 20px; border-radius:5px; cursor:pointer; font-weight:bold">Aceitar</button>';
+      document.body.appendChild(banner);
+      document.getElementById('okCookie').onclick = function() {
+        localStorage.setItem('cookieWille', 'true');
+        banner.remove();
+      };
+    }
+  </script>
+</body>
+</html>

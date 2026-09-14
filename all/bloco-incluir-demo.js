@@ -16,7 +16,7 @@
   }
 
   // Banner de cookies
-  injetar('all/bloco-cookies-demo.html', 'body', 'beforeend');  
+  injetar('all/bloco-cookies-demo.html', 'body', 'beforeend');
 
   // GA4 / GTM
   injetar('all/bloco-ga4-gtm-demo.html', 'head', 'beforeend');
@@ -62,7 +62,7 @@
 
 div.innerHTML  = '<a href="' + BASE + 'all/politica-demo.html" style="color:#888;text-decoration:none;">Política de Privacidade</a>';
 div.innerHTML += '<br><a href="https://edusidegum.github.io/" style="color:#888;text-decoration:none;">Desenvolvido por <e/> e-Sid Solutions</a>';
-    
+
     footer.appendChild(div);
   });
 
