@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#78BE20">
+  <title>📂 Projetos de demonstração — Edu Sidegum</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0a;
+      color: #d6d6d6;
+      font-family: "Segoe UI", "Open Sans", sans-serif;
+      padding: 40px 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #78BE20;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .page-description {
+      text-align: center;
+      color: #888;
+      max-width: 680px;
+      margin: 0 auto 30px;
+      font-size: .85rem;
+      line-height: 1.5;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      max-width: 1100px;
+      margin: 0 auto;
+      border: 1px solid rgba(120,190,32,.2);
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 760px; }
+    thead { background: #1a1a1a; }
+    th {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #78BE20;
+      border-bottom: 2px solid rgba(120,190,32,.3);
+    }
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      font-size: .85rem;
+    }
+    tbody tr { transition: background .2s; }
+    tbody tr:hover { background: rgba(120,190,32,.05); }
+    tbody tr:nth-child(even) { background: rgba(255,255,255,.015); }
+    tbody tr:nth-child(even):hover { background: rgba(120,190,32,.06); }
+    a { color: #78BE20; text-decoration: none; font-weight: 600; }
+    a:hover { color: #8ae029; text-decoration: underline; }
+    .tag-status {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+    .tag-on { background: rgba(120,190,32,.2); color: #78BE20; }
+    .tag-off { background: rgba(255,70,70,.2); color: #ff6b6b; }
+    .tag-checking { background: rgba(255,193,7,.2); color: #ffc107; }
+    .info { text-align: center; margin-top: 30px; font-size: .7rem; color: #555; }
+    .loading-row td, .error-row td { text-align: center; padding: 30px; color: #888; }
+    .retry { color: #78BE20; cursor: pointer; margin-left: 8px; }
+  </style>
+</head>
+<body>
+  <h1>📂 Projetos de demonstração — Edu Sidegum</h1>
+  <p class="page-description">
+    Subdiretórios publicados no repositório <strong>edusidegum/demo</strong>.
+    A listagem é montada automaticamente pela API do GitHub.
+  </p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Diretório</th>
+          <th>🌐 Site</th>
+          <th>🐙 GitHub</th>
+          <th>Status</th>
+          <th>Atualizado</th>
+        </tr>
+      </thead>
+      <tbody id="projects-body">
+        <tr class="loading-row"><td colspan="6">🔍 Buscando subdiretórios...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="info">Fonte: GitHub API · edusidegum/demo · Atualização automática</p>
+
+  <script>
+    "use strict";
+
+    const OWNER = "edusidegum";
+    const REPO = "demo";
+    const BRANCH = "main";
+    const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}`;
+    const PAGES_ROOT = `https://${OWNER}.github.io/${REPO}`;
+    const body = document.getElementById("projects-body");
+
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+    }[char]));
+
+    const formatDate = value => value
+      ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "short" }).format(new Date(value))
+      : "—";
+
+    async function github(path) {
+      const response = await fetch(`${API_ROOT}${path}`, {
+        headers: { Accept: "application/vnd.github+json" }
+      });
+      if (!response.ok) throw new Error(`GitHub API: ${response.status}`);
+      return response.json();
+    }
+
+    async function checkSite(url) {
+      try {
+        // No GitHub Pages, HEAD pode ser bloqueado por CORS; GET é mais compatível.
+        const response = await fetch(url, { method: "GET", mode: "cors", cache: "no-store" });
+        return response.ok;
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function createRow(project, index) {
+      const site = `${PAGES_ROOT}/${encodeURIComponent(project.name)}/`;
+      const githubUrl = `https://github.com/${OWNER}/${REPO}/tree/${BRANCH}/${encodeURIComponent(project.name)}`;
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${index}</td>
+        <td><strong>${escapeHtml(project.name)}</strong></td>
+        <td><a href="${site}" target="_blank" rel="noopener">Abrir site ↗</a></td>
+        <td><a href="${githubUrl}" target="_blank" rel="noopener">Ver arquivos ↗</a></td>
+        <td><span class="tag-status tag-checking">Verificando…</span></td>
+        <td>${formatDate(project.updated_at)}</td>`;
+      return { row, site };
+    }
+
+    async function loadProjects() {
+      body.innerHTML = `<tr class="loading-row"><td colspan="6">🔍 Buscando subdiretórios...</td></tr>`;
+      try {
+        const contents = await github(`/contents?ref=${BRANCH}`);
+        const projects = contents
+          .filter(item => item.type === "dir")
+          .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+
+        if (!projects.length) {
+          body.innerHTML = `<tr class="error-row"><td colspan="6">Nenhum subdiretório encontrado.</td></tr>`;
+          return;
+        }
+
+        body.innerHTML = "";
+        const checks = [];
+        projects.forEach((project, index) => {
+          const { row, site } = createRow(project, index + 1);
+          body.appendChild(row);
+          const status = row.querySelector(".tag-status");
+          checks.push(checkSite(site).then(online => {
+            status.textContent = online ? "Online" : "Indisponível";
+            status.className = `tag-status ${online ? "tag-on" : "tag-off"}`;
+          }));
+        });
+        await Promise.all(checks);
+      } catch (error) {
+        console.error(error);
+        body.innerHTML = `<tr class="error-row"><td colspan="6">⚠️ Não foi possível carregar os projetos.<span class="retry" onclick="loadProjects()">Tentar novamente</span></td></tr>`;
+      }
+    }
+
+    loadProjects();
+  </script>
+   <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="https://edusidegum.github.io/demo/all/bloco-incluir-demo.js" defer></script>
+</body>
+</html>
