@@ -24,12 +24,41 @@
 	<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "Clipping Autorizado: Manual Operacional de Cortes, Reels, Shorts e TikTok",
-  "author": { "@type": "Person", "name": "Edu Sidegum" },
-  "description": "Manual em PDF para estruturar uma operação de clipping autorizado e distribuição de vídeos verticais.",
-  "datePublished": "2026",
-  "inLanguage": "pt-BR"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://edusidegum.github.io/demo/clipador/#org",
+      "name": "e-Sid Solutions M.E.",
+      "url": "https://github.com/edusidegum",
+      "sameAs": ["https://www.linkedin.com/in/edusidegum/"]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://edusidegum.github.io/demo/clipador/#book",
+      "name": "Clipping Autorizado: Manual Operacional de Cortes, Reels, Shorts e TikTok",
+      "author": { "@type": "Person", "name": "Edu Sidegum" },
+      "publisher": { "@id": "https://edusidegum.github.io/demo/clipador/#org" },
+      "description": "Manual em PDF para estruturar uma operação de clipping autorizado e distribuição de vídeos verticais.",
+      "datePublished": "2026",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "Product",
+      "name": "Manual Operacional de Clipping Autorizado",
+      "url": "https://edusidegum.github.io/demo/clipador/",
+      "description": "Manual em PDF para estruturar uma operação de clipping autorizado e distribuição de vídeos verticais.",
+      "image": "https://edusidegum.github.io/demo/clipador/capaclipador.png",
+      "brand": { "@id": "https://edusidegum.github.io/demo/clipador/#org" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://go.hotmart.com/V107424504W",
+        "priceCurrency": "BRL",
+        "price": "47.50",
+        "availability": "https://schema.org/InStock",
+        "seller": { "@id": "https://edusidegum.github.io/demo/clipador/#org" }
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
